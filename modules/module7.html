@@ -6,7 +6,7 @@
   <title>Module 7 - Security, OTA & Debugging</title>
   <style>body{font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:0;background:#f8fafc;color:#0f172a;}main{max-width:1000px;margin:0 auto;padding:1.5rem;}section{background:white;padding:1.2rem;border-radius:10px;margin-bottom:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.05);}code{background:#eef2ff;padding:0.1rem 0.3rem;border-radius:4px;}a{color:#2563eb;text-decoration:none;}a:hover{text-decoration:underline;}.mermaid{background:#fff;padding:1rem;border-radius:8px;}</style>
   <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.16.0/dist/mermaid.esm.min.mjs';
     mermaid.initialize({ startOnLoad: true, theme: 'default' });
   </script>
 </head>
@@ -32,7 +32,7 @@
 
     <section>
       <h2>State Diagram – Diagnostic Session Lifecycle</h2>
-      <div class="mermaid">
+      <pre class="mermaid">
 stateDiagram-v2
     [*] --> Idle
     Idle --> SessionStarted: startDiagnosticSession()
@@ -44,7 +44,7 @@ stateDiagram-v2
     Active --> Failed: errorDetected()
     Failed --> [*]
     Completed --> [*]
-      </div>
+      </pre>
     </section>
 
     <section>
