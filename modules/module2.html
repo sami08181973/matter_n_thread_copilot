@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 2 - Matter Architecture & Device Model</title>
+  <style>body{font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:0;background:#f8fafc;color:#0f172a;}main{max-width:1000px;margin:0 auto;padding:1.5rem;}section{background:white;padding:1.2rem;border-radius:10px;margin-bottom:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.05);}code{background:#eef2ff;padding:0.1rem 0.3rem;border-radius:4px;}a{color:#2563eb;text-decoration:none;}a:hover{text-decoration:underline;}</style>
+</head>
+<body>
+  <main>
+    <h1>Module 2: Matter Architecture & Device Model</h1>
+    <p>This module explains the Matter data model, device topology, and how endpoints and clusters relate to a real device.</p>
+
+    <section>
+      <h2>Core Concepts</h2>
+      <ul>
+        <li><strong>Node:</strong> a physical or virtual device in the network.</li>
+        <li><strong>Endpoint:</strong> a functional part of a device such as a light or a switch.</li>
+        <li><strong>Cluster:</strong> a group of attributes, commands, and events.</li>
+        <li><strong>Device Type:</strong> defines the behavior of a product category.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Architecture Walkthrough</h2>
+      <p>A Matter lighting system commonly contains a light endpoint with an on/off cluster, a level control cluster, and a color control cluster. The application layer maps these clusters to device behavior.</p>
+    </section>
+
+    <section>
+      <h2>Hands-on Lab</h2>
+      <p>Design a Matter-enabled smart lighting system with these components:</p>
+      <ul>
+        <li>One light endpoint</li>
+        <li>One switch endpoint</li>
+        <li>One occupancy sensor endpoint</li>
+      </ul>
+      <p>Document the clusters and attributes each endpoint needs.</p>
+    </section>
+
+    <section>
+      <h2>Reference C++ Example</h2>
+      <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+struct Cluster {
+    std::string name;
+    std::string purpose;
+};
+
+struct Endpoint {
+    int id;
+    std::string role;
+    std::vector&lt;Cluster&gt; clusters;
+};
+
+int main() {
+    Endpoint light{1, "Lighting", {{"OnOff", "Turn the light on or off"}, {"LevelControl", "Dim the light"}}};
+    std::cout &lt;&lt; "Endpoint " &lt;&lt; light.id &lt;&lt; " (" &lt;&lt; light.role &lt;&lt; ")\n";
+    for (const auto&amp; cluster : light.clusters) {
+        std::cout &lt;&lt; "- " &lt;&lt; cluster.name &lt;&lt; ": " &lt;&lt; cluster.purpose &lt;&lt; "\n";
+    }
+    return 0;
+}</code></pre>
+    </section>
+  </main>
+</body>
+</html>

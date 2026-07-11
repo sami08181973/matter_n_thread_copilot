@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 8 - Capstone Project</title>
+  <style>body{font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:0;background:#f8fafc;color:#0f172a;}main{max-width:1000px;margin:0 auto;padding:1.5rem;}section{background:white;padding:1.2rem;border-radius:10px;margin-bottom:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.05);}code{background:#eef2ff;padding:0.1rem 0.3rem;border-radius:4px;}a{color:#2563eb;text-decoration:none;}a:hover{text-decoration:underline;}</style>
+</head>
+<body>
+  <main>
+    <h1>Module 8: Capstone Project – Matter over Thread Smart Home Solution</h1>
+    <p>Build a production-ready smart home solution that combines a smart light, a smart plug, and an environmental sensor over Thread and Matter.</p>
+
+    <section>
+      <h2>Project Scope</h2>
+      <ul>
+        <li>Implement a Matter light endpoint</li>
+        <li>Implement a Matter plug endpoint</li>
+        <li>Implement a sensor endpoint and telemetry reporting</li>
+        <li>Use a border router to connect the Thread network to a controller</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Deliverables</h2>
+      <ul>
+        <li>System architecture diagram</li>
+        <li>Device model and cluster mapping</li>
+        <li>Firmware build and commissioning steps</li>
+        <li>Testing and validation report</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Reference C++ Example</h2>
+      <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+struct SmartHomeDevice {
+    std::string role;
+    std::string network;
+};
+
+int main() {
+    SmartHomeDevice light{"Light", "Thread"};
+    SmartHomeDevice plug{"Plug", "Thread"};
+    SmartHomeDevice sensor{"Sensor", "Thread"};
+
+    std::cout &lt;&lt; light.role &lt;&lt; " on " &lt;&lt; light.network &lt;&lt; "\n";
+    std::cout &lt;&lt; plug.role &lt;&lt; " on " &lt;&lt; plug.network &lt;&lt; "\n";
+    std::cout &lt;&lt; sensor.role &lt;&lt; " on " &lt;&lt; sensor.network &lt;&lt; "\n";
+    return 0;
+}</code></pre>
+    </section>
+  </main>
+</body>
+</html>

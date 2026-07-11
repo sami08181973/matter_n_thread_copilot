@@ -1,0 +1,13 @@
+{
+  "name": "matter-n-thread-copilot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static training site for Matter over Thread labs",
+  "scripts": {
+    "start": "http-server . -p 8080 -c-1",
+    "build": "g++ src/matter_intro_demo.cpp -o matter_intro_demo.exe && g++ src/thread_role_demo.cpp -o thread_role_demo.exe"
+  },
+  "devDependencies": {
+    "http-server": "^14.0.1"
+  }
+}

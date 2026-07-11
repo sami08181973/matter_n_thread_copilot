@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setup Guide - Matter over Thread</title>
+  <style>body{font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:0;background:#f8fafc;color:#0f172a;}main{max-width:1000px;margin:0 auto;padding:1.5rem;}section{background:white;padding:1.2rem;border-radius:10px;margin-bottom:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.05);}a{color:#2563eb;text-decoration:none;}a:hover{text-decoration:underline;}</style>
+</head>
+<body>
+  <main>
+    <h1>Setup Guide</h1>
+    <p>Follow these steps to prepare the hardware and software stack for the Matter and Thread training labs.</p>
+
+    <section>
+      <h2>1. Development Environment</h2>
+      <ul>
+        <li>Install Visual Studio Code.</li>
+        <li>Install a C++ compiler such as g++ or MSYS2 on Windows.</li>
+        <li>Clone the Matter SDK from <a href="https://github.com/project-chip/connectedhomeip" target="_blank" rel="noopener">Connected Home IP</a>.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. ESP32 / nRF Boards</h2>
+      <ul>
+        <li>For ESP32, install ESP-IDF and configure the toolchain.</li>
+        <li>For nRF boards, install the nRF Connect SDK and VS Code extensions.</li>
+        <li>Purchase links: <a href="https://www.espressif.com/en/products/socs/esp32" target="_blank" rel="noopener">ESP32</a> and <a href="https://www.nordicsemi.com/Products/Development-hardware/nRF52840-DK" target="_blank" rel="noopener">nRF52840 DK</a>.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Raspberry Pi OpenThread Border Router</h2>
+      <ul>
+        <li>Use a Raspberry Pi 4 or 5 with a compatible power supply.</li>
+        <li>Install OpenThread Border Router (OTBR) and configure the network interface.</li>
+        <li>Purchase link: <a href="https://www.raspberrypi.com/products/" target="_blank" rel="noopener">Raspberry Pi Products</a>.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. CHIP Tool and Matter Controller</h2>
+      <ul>
+        <li>Build or download CHIP Tool to commission and test Matter devices.</li>
+        <li>Use a mobile controller or desktop controller for onboarding and control.</li>
+        <li>Reference: <a href="https://github.com/project-chip/connectedhomeip" target="_blank" rel="noopener">Matter SDK / CHIP Tool</a>.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Packet Analysis</h2>
+      <ul>
+        <li>Install Wireshark for network and commissioning traffic analysis.</li>
+        <li>Use it together with OpenThread sniffer tools when available.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

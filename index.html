@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matter over Thread Training Kit</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f7fb; color: #1f2937; }
+    header { background: linear-gradient(135deg, #0f172a, #2563eb); color: white; padding: 2rem 1.5rem; }
+    main { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+    .card { background: white; border-radius: 12px; padding: 1.2rem; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    h1,h2,h3 { margin-top: 0; }
+    ul { padding-left: 1.2rem; }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Matter over Thread Training Kit</h1>
+    <p>End-to-end learning path for IoT connectivity, Matter, and Thread with hands-on labs, installation steps, and hardware guidance.</p>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Course Overview</h2>
+      <p>This training package introduces the evolution of smart home IoT standards, Matter architecture, Thread networking, security, OTA updates, and a capstone project. It includes HTML documentation pages and runnable C/C++ examples suitable for learning and demonstration.</p>
+      <ul>
+        <li>Module 1: Introduction to IoT Connectivity & Matter</li>
+        <li>Module 2: Matter Architecture & Device Model</li>
+        <li>Module 3: Matter Commissioning & Interaction Model</li>
+        <li>Module 4: Matter Embedded Development</li>
+        <li>Module 5: Thread Protocol Fundamentals</li>
+        <li>Module 6: Thread Network Formation & Communication</li>
+        <li>Module 7: Security, OTA & Debugging</li>
+        <li>Module 8: Capstone Project</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Modules</h2>
+      <div class="grid">
+        <div><h3><a href="modules/module1.html">Module 1</a></h3><p>Smart home evolution, IoT standards, Matter overview, and interoperability challenges.</p></div>
+        <div><h3><a href="modules/module2.html">Module 2</a></h3><p>Matter architecture, node/endpoint/cluster/device-type model, and design guidance.</p></div>
+        <div><h3><a href="modules/module3.html">Module 3</a></h3><p>Commissioning flow, QR code onboarding, secure sessions, and interaction model basics.</p></div>
+        <div><h3><a href="modules/module4.html">Module 4</a></h3><p>Embedded development with ESP32/nRF, Matter SDK structure, and custom clusters.</p></div>
+        <div><h3><a href="modules/module5.html">Module 5</a></h3><p>Thread networking concepts, roles, topology, and mesh principles.</p></div>
+        <div><h3><a href="modules/module6.html">Module 6</a></h3><p>Thread network creation, joining, routing, addressing, and border router operations.</p></div>
+        <div><h3><a href="modules/module7.html">Module 7</a></h3><p>Security, certificates, OTA updates, debugging, and troubleshooting.</p></div>
+        <div><h3><a href="modules/module8.html">Module 8</a></h3><p>Capstone project for a Matter over Thread smart home solution.</p></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Hardware & Tooling</h2>
+      <ul>
+        <li><strong>ESP32 / nRF</strong> development boards for embedded demos.</li>
+        <li><strong>Raspberry Pi</strong> for OpenThread Border Router (OTBR) and networking lab.</li>
+        <li><strong>CHIP Tool</strong> for commissioning and testing Matter devices.</li>
+        <li><strong>Wireshark</strong> for packet analysis and troubleshooting.</li>
+        <li><strong>VS Code</strong> and ESP-IDF/Nordic SDK for firmware development.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Suggested Purchase Links</h2>
+      <ul>
+        <li>ESP32 Dev Kit: <a href="https://www.espressif.com/en/products/socs/esp32" target="_blank" rel="noopener">Espressif ESP32</a></li>
+        <li>nRF52840 DK: <a href="https://www.nordicsemi.com/Products/Development-hardware/nRF52840-DK" target="_blank" rel="noopener">Nordic nRF52840 DK</a></li>
+        <li>Raspberry Pi 4/5: <a href="https://www.raspberrypi.com/products/" target="_blank" rel="noopener">Raspberry Pi Products</a></li>
+        <li>OpenThread Border Router resources: <a href="https://openthread.io/" target="_blank" rel="noopener">OpenThread</a></li>
+        <li>CHIP Tool / Matter SDK: <a href="https://github.com/project-chip/connectedhomeip" target="_blank" rel="noopener">Connected Home IP (Matter SDK)</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

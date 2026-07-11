@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 3 - Matter Commissioning & Interaction Model</title>
+  <style>body{font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:0;background:#f8fafc;color:#0f172a;}main{max-width:1000px;margin:0 auto;padding:1.5rem;}section{background:white;padding:1.2rem;border-radius:10px;margin-bottom:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.05);}code{background:#eef2ff;padding:0.1rem 0.3rem;border-radius:4px;}a{color:#2563eb;text-decoration:none;}a:hover{text-decoration:underline;}</style>
+</head>
+<body>
+  <main>
+    <h1>Module 3: Matter Commissioning & Interaction Model</h1>
+    <p>This module covers commissioning flow, QR code onboarding, secure sessions, commands, attributes, and events.</p>
+
+    <section>
+      <h2>Key Concepts</h2>
+      <ul>
+        <li>BLE commissioning for initial setup.</li>
+        <li>Device discovery and QR code onboarding.</li>
+        <li>Secure session establishment using certificates and authentication.</li>
+        <li>Commands, attributes, events, and cluster communication.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Hands-on Lab</h2>
+      <p>Commission a Matter smart plug into a controller and perform basic commands such as on/off and status read.</p>
+      <ol>
+        <li>Pair the device using the commissioning flow.</li>
+        <li>Use CHIP Tool (or equivalent Matter tool) to discover the device.</li>
+        <li>Issue a command and read a status attribute.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Reference C++ Example</h2>
+      <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+struct CommissioningFlow {
+    std::string discovery;
+    std::string secureSession;
+    std::string command;
+};
+
+int main() {
+    CommissioningFlow flow{"QR code + BLE", "Certificate-based session", "OnOff command"};
+    std::cout &lt;&lt; "Discovery: " &lt;&lt; flow.discovery &lt;&lt; "\n";
+    std::cout &lt;&lt; "Session: " &lt;&lt; flow.secureSession &lt;&lt; "\n";
+    std::cout &lt;&lt; "Command: " &lt;&lt; flow.command &lt;&lt; "\n";
+    return 0;
+}</code></pre>
+    </section>
+  </main>
+</body>
+</html>
