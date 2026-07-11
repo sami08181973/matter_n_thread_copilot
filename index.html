@@ -14,6 +14,22 @@
     a { color: #2563eb; text-decoration: none; }
     a:hover { text-decoration: underline; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+    .watermark {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      color: rgba(15, 23, 42, 0.07);
+      font-size: 8vw;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      z-index: 0;
+    }
+    .content-wrap { position: relative; z-index: 1; }
+    footer { text-align: center; padding: 1.2rem 1rem 2rem; color: #475569; font-size: 0.95rem; }
   </style>
 </head>
 <body>
@@ -24,7 +40,8 @@
     <strong>Founder & CTO</strong>, Embedded AI Design Labs Pvt Ltd<br>
     <a href="mailto:muhammadsami@embedailabs.com" style="color: #dbeafe;">muhammadsami@embedailabs.com</a></p>
   </header>
-  <main>
+  <div class="watermark">Embedded AI Design Labs</div>
+  <main class="content-wrap">
     <section class="card">
       <h2>Course Overview</h2>
       <p>This training package introduces the evolution of smart home IoT standards, Matter architecture, Thread networking, security, OTA updates, and a capstone project. It includes HTML documentation pages and runnable C/C++ examples suitable for learning and demonstration.</p>
@@ -77,5 +94,8 @@
       </ul>
     </section>
   </main>
+  <footer>
+    <p>© 2026 Embedded AI Design Labs Pvt Ltd. All rights reserved.</p>
+  </footer>
 </body>
 </html>
