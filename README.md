@@ -20,6 +20,16 @@ g++ src/thread_role_demo.cpp -o thread_role_demo
 thread_role_demo.exe
 ```
 
+```bash
+g++ src/adas/adas_component.cpp tests/adas_test_runner.cpp -I src -o tests/adas_test_runner.exe
+tests/adas_test_runner.exe
+```
+
+## ADAS coverage notes
+- Includes positive and negative test cases for collision-warning logic.
+- Covers critical braking, warning braking, steering assist, healthy camera failure, and safe-state cases.
+- A CAPL-style script is included in tests/adas_capl.cmm to document realtime validation scenarios.
+
 ## Hardware and purchase links
 - ESP32: https://www.espressif.com/en/products/socs/esp32
 - nRF52840 DK: https://www.nordicsemi.com/Products/Development-hardware/nRF52840-DK

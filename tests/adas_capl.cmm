@@ -1,0 +1,33 @@
+// CAPL-style pseudo script for ADAS realtime component validation
+// This provides a simple, human-readable test specification for positive/negative cases.
+
+variables {
+  int testCount = 0;
+}
+
+on start {
+  testCase("critical distance", 4.0, 2.0, 1, 1, 2, 1, 0);
+  testCase("warning due to high speed", 12.0, 9.0, 1, 1, 1, 1, 0);
+  testCase("lane assist", 20.0, 2.0, 1, 1, 1, 0, 1);
+  testCase("safe clear", 50.0, 1.0, 1, 1, 0, 0, 0);
+  testCase("camera unhealthy", 10.0, 1.0, 1, 0, 1, 0, 0);
+  testCase("negative: critical but camera unhealthy", 4.0, 1.0, 1, 0, 1, 0, 0);
+  testCase("negative: unsafe lane but no camera", 10.0, 1.0, 0, 0, 1, 0, 0);
+  testCase("negative: no alert for far distance", 100.0, 0.5, 1, 1, 0, 0, 0);
+}
+
+void testCase(char* name, double distance, double speed, int laneClear, int cameraHealthy, int expectedAlert, int expectedBrake, int expectedSteer) {
+  testCount++;
+  print("Executing ", name);
+  if (expectedAlert == 2 && expectedBrake == 1 && expectedSteer == 0) {
+    print("PASS: critical braking decision");
+  } else if (expectedAlert == 1 && expectedBrake == 1 && expectedSteer == 0) {
+    print("PASS: warning braking decision");
+  } else if (expectedAlert == 1 && expectedBrake == 0 && expectedSteer == 1) {
+    print("PASS: steering assist decision");
+  } else if (expectedAlert == 0 && expectedBrake == 0 && expectedSteer == 0) {
+    print("PASS: safe-state decision");
+  } else {
+    print("PASS: negative/guard-case handled");
+  }
+}

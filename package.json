@@ -5,7 +5,8 @@
   "description": "Static training site for Matter over Thread labs",
   "scripts": {
     "start": "http-server . -p 8080 -c-1",
-    "build": "g++ src/matter_intro_demo.cpp -o matter_intro_demo.exe && g++ src/thread_role_demo.cpp -o thread_role_demo.exe"
+    "build": "g++ src/matter_intro_demo.cpp -o matter_intro_demo.exe && g++ src/thread_role_demo.cpp -o thread_role_demo.exe && g++ src/adas/adas_component.cpp tests/adas_test_runner.cpp -I src -o tests/adas_test_runner.exe",
+    "test:adas": "tests/adas_test_runner.exe"
   },
   "devDependencies": {
     "http-server": "^14.0.1"
